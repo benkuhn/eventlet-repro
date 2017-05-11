@@ -1,11 +1,16 @@
 import flask
 import logging
+import sys
+import ssl
+import threading
+import newrelic.core.application
 
-# This works:
-#logging.getLogger('yo').warn('hi')
-# This causes a newrelic initialization error when visiting localhost:5000
-# due to a RecursionError in SSL.py when
-logging.warn('hi')
+def dothing():
+    newrelic.core.application.Application('test').activate_session()
+    print('ran')
+
+logging.basicConfig()
+threading.Thread(target=dothing).run()
 
 app = flask.Flask(__name__)
 @app.route('/')
