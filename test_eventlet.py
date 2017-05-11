@@ -4,6 +4,8 @@ import sys
 import ssl
 import threading
 import newrelic.core.application
+import eventlet
+eventlet.monkey_patch()
 
 def dothing():
     #newrelic.core.application.Application('test').activate_session()
@@ -13,8 +15,3 @@ def dothing():
 
 logging.basicConfig()
 threading.Thread(target=dothing).run()
-
-app = flask.Flask(__name__)
-@app.route('/')
-def hello():
-    return 'Hello world'
