@@ -1,7 +1,4 @@
-import flask
 import logging
-import sys
-import ssl
 import threading
 import newrelic.core.application
 import eventlet
