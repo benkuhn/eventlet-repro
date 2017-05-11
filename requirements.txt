@@ -1,0 +1,15 @@
+appdirs==1.4.3
+click==6.7
+enum-compat==0.0.2
+eventlet==0.21.0
+Flask==0.11
+greenlet==0.4.12
+gunicorn==19.7.1
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+newrelic==2.86.0.65
+packaging==16.8
+pyparsing==2.2.0
+six==1.10.0
+Werkzeug==0.12.1
