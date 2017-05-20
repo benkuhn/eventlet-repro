@@ -5,6 +5,7 @@ import ssl
 import threading
 import newrelic.core.application
 import eventlet
+# put this before newrelic init and it works
 eventlet.monkey_patch()
 
 def dothing():
